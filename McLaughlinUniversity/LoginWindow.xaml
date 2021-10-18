@@ -1,0 +1,18 @@
+﻿<Window x:Class="McLaughlinUniversity.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:McLaughlinUniversity"
+        mc:Ignorable="d"
+        Title="Login" Height="350" Width="400">
+    <Grid>
+        <Label Name="lblUserID" Content="User ID" HorizontalAlignment="Left" Margin="100,82,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Name="lblPassword" Content="Password" HorizontalAlignment="Left" Margin="86,165,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.321,0.055" FontSize="16"/>
+        <TextBox Name="txtUserID" HorizontalAlignment="Left" Margin="167,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <PasswordBox Name="txtPassword" PasswordChar="*" HorizontalAlignment="Left" Margin="167,169,0,0" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <Button Name="btnSubmit" Content="Log In" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Background="#FF44F4F1" Width="174" FontSize="18"/>
+        <Label Name="lblErrors" Content="User ID or Password is incorrect" Visibility="Hidden" HorizontalAlignment="Left" Margin="248,261,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
