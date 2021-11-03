@@ -22,9 +22,10 @@ namespace McLaughlinUniversity
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnReports_Click(object sender, RoutedEventArgs e)
         {
-
+            Reports reports = new Reports();
+            reports.Show();
         }
     }
 }

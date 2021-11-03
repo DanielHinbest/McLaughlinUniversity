@@ -11,59 +11,63 @@
             <ColumnDefinition Width="300"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel>
-            <ListView FontSize="14" Width="799">
-                <ListViewItem Padding="1">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Individual Campus Targets" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem Padding="1">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Donor Contribution Projections" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem Padding="1">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Donor Type Targets" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem Padding="1">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Committee Member Assignments and Targets" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem Padding="1">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Contributions List" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem Padding="1">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Donor Contribution Report" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem Padding="1">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Committee Performance Report" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem Padding="1">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Contributions by Campus" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem Padding="1">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Contributions by Donor Category" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem Padding="1">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Contributions to Programs by Donor Category" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
-            </ListView>
-        </StackPanel>
+        <Grid>
+            <StackPanel>
+                <ListView FontSize="14" Width="799" SelectionChanged="ListView_SelectionChanged">
+                    <ListViewItem x:Name="IndividualCampusTargets" Padding="1" Width="360" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Individual Campus Targets" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="DonorContributionProjections" Padding="1" Width="360" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Donor Contribution Projections" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="DonorTypeTargets" Padding="1" Width="360" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Donor Type Targets" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="CommitteeMemberAssignmentsandTargets" Padding="1" Width="360" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Committee Member Assignments and Targets" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ContributionsList" Padding="1" Width="360" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Contributions List" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="DonorContributionReport" Padding="1" Width="360" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Donor Contribution Report" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="CommitteePerformanceReport" Padding="1" Width="360" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Committee Performance Report" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ContributionsByCampus" Padding="1" Width="360" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Contributions by Campus" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ContributionsByDonorCategory" Padding="1" Width="360" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Contributions by Donor Category" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ContributionsToProgramsByDonorCategory" Padding="1" Width="360" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Contributions to Programs by Donor Category" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1" Name="ReportPanel" Height="383" VerticalAlignment="Top" Margin="0,51,0,0"/>
+        <Label Name="lblTitle" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="690" Height="46"/>
     </Grid>
 </Window>

@@ -33,8 +33,4 @@ INSERT INTO tblProgramTargets VALUES (3, 3, 3);
 INSERT INTO tblProgramTargets VALUES (4, 4, 4);
 INSERT INTO tblProgramTargets VALUES (5, 5, 5);
 
--- Not sure how to do bcrypt here in Microsoft SQL databases
-INSERT INTO tblUsers VALUES ('Daniel', 'password');
-INSERT INTO tblUsers VALUES ('Ryan', 'password');
-INSERT INTO tblUsers VALUES ('Anna', 'password');
-INSERT INTO tblUsers VALUES ('Yash', 'password');
+INSERT INTO tblUsers VALUES ('Daniel', 

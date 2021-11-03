@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,20 +14,13 @@ using System.Windows.Shapes;
 namespace McLaughlinUniversity
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ContributionsList.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ContributionsList : UserControl
     {
-        public MainWindow()
+        public ContributionsList()
         {
             InitializeComponent();
-        }
-
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
-        {
-            DashboardWindow dashboardWindow = new DashboardWindow();
-            dashboardWindow.Show();
-            this.Hide();
         }
     }
 }
