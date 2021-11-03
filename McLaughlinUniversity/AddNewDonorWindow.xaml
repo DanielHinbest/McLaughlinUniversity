@@ -10,7 +10,7 @@
         <Label Content="Add New Donor" HorizontalAlignment="Left" Margin="124,0,0,0" VerticalAlignment="Top"/>
 
         <RadioButton Content="Individual" HorizontalAlignment="Left" Margin="42,35,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Corporation" HorizontalAlignment="Left" Margin="124,38,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Corporation" HorizontalAlignment="Left" Margin="124,31,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="Foundation" HorizontalAlignment="Left" Margin="222,35,0,0" VerticalAlignment="Top"/>
         <Label Content="First Name" HorizontalAlignment="Left" Margin="41,66,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="124,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

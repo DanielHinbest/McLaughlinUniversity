@@ -13,18 +13,13 @@ using System.Windows.Shapes;
 namespace McLaughlinUniversity
 {
     /// <summary>
-    /// Interaction logic for DashboardWindow.xaml
+    /// Interaction logic for Reports.xaml
     /// </summary>
-    public partial class DashboardWindow : Window
+    public partial class Reports : Window
     {
-        public DashboardWindow()
+        public Reports()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

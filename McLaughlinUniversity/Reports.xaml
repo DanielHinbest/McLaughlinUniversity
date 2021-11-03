@@ -1,0 +1,69 @@
+﻿<Window x:Class="McLaughlinUniversity.Reports"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:McLaughlinUniversity"
+        mc:Ignorable="d"
+        Title="Reports" Height="450" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <ListView FontSize="14" Width="799">
+                <ListViewItem Padding="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Individual Campus Targets" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Padding="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Donor Contribution Projections" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Padding="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Donor Type Targets" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Padding="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Committee Member Assignments and Targets" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Padding="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Contributions List" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Padding="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Donor Contribution Report" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Padding="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Committee Performance Report" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Padding="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Contributions by Campus" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Padding="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Contributions by Donor Category" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Padding="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Contributions to Programs by Donor Category" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>
