@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace McLaughlinUniversity
 {
@@ -27,9 +29,11 @@ namespace McLaughlinUniversity
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            DashboardWindow dashboardWindow = new DashboardWindow();
-            dashboardWindow.Show();
-            this.Hide();
+            
+
+            //DashboardWindow dashboardWindow = new DashboardWindow();
+            //dashboardWindow.Show();
+            //this.Hide();
         }
     }
 }
