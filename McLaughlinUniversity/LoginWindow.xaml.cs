@@ -29,12 +29,29 @@ namespace McLaughlinUniversity
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            User user = DataAccess.GetUser(txtUserID.Text, txtPassword.Password);
-            MessageBox.Show(user.UserID, user.Password);
-
-            //DashboardWindow dashboardWindow = new DashboardWindow();
-            //dashboardWindow.Show();
-            //this.Hide();
+            User user = new User();
+            if (txtUserID.Text != string.Empty && txtPassword.Password != string.Empty)
+            {
+                user = DataAccess.GetUser(txtUserID.Text, txtPassword.Password);
+                if (user.UserID != null && user.Password != null)
+                {
+                    DashboardWindow dashboardWindow = new DashboardWindow();
+                    dashboardWindow.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    lblErrors.Visibility = Visibility.Visible;
+                    lblErrors.Content = "Invalid username or password";
+                }
+            }
+            else
+            {
+                lblErrors.Visibility = Visibility.Visible;
+                lblErrors.Content = "Please enter a username and password";
+            }
+            //MessageBox.Show(user.UserID, user.Password);           
+            
         }
     }
 }
