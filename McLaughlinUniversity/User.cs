@@ -22,7 +22,7 @@ namespace McLaughlinUniversity
 
         public string Password
         {
-            get { return password}
+            get { return password; }
             set { password = value; }
         }
     }

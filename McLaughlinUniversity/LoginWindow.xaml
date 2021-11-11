@@ -11,7 +11,7 @@
         <Label Name="lblPassword" Content="Password" HorizontalAlignment="Left" Margin="86,165,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.321,0.055" FontSize="16"/>
         <TextBox Name="txtUserID" HorizontalAlignment="Left" Margin="167,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
         <PasswordBox Name="txtPassword" PasswordChar="*" HorizontalAlignment="Left" Margin="167,169,0,0" VerticalAlignment="Top" Width="120" FontSize="16"/>
-        <Button Name="btnSubmit" Content="Log In" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Background="#FF44F4F1" Width="174" FontSize="18" Click="btnSubmit_Click"/>
+        <Button Name="btnSubmit" Content="Log In" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Background="#FF44F4F1" Width="174" FontSize="18" Click="btnSubmit_Click" IsDefault="True"/>
         <Label Name="lblErrors" Content="User ID or Password is incorrect" Visibility="Hidden" HorizontalAlignment="Left" Margin="248,261,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblLogoHere" FontSize="18" Content="Logo goes here" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top"/>
 

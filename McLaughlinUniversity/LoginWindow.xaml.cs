@@ -29,7 +29,8 @@ namespace McLaughlinUniversity
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            
+            User user = DataAccess.GetUser(txtUserID.Text, txtPassword.Password);
+            MessageBox.Show(user.UserID, user.Password);
 
             //DashboardWindow dashboardWindow = new DashboardWindow();
             //dashboardWindow.Show();
@@ -37,3 +38,4 @@ namespace McLaughlinUniversity
         }
     }
 }
+
