@@ -13,6 +13,7 @@ namespace McLaughlinUniversity
             return Properties.Settings.Default.connectString;
         }
 
+
         public static User GetUser(string userID, string password)
         {
             User user = new User();

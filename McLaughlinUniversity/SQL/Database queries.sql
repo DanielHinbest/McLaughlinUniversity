@@ -130,6 +130,9 @@ INSERT INTO tblTargets VALUES (400002, 2001, $500000.00, $560000.00, $500000.00,
 INSERT INTO tblTargets VALUES (400003, 2002, $240000.00, $330000.00, $400000.00, $450000.00);
 INSERT INTO tblTargets VALUES (400004, 2003, $100000.00, $100000.00, $150000.00, $150000.00);
 INSERT INTO tblTargets VALUES (400005, 2004, $150000.00, $150000.00, $330000.00, $300000.00);
+INSERT INTO tblTargets VALUES (400006, 2004, $250000.00, $130000.00, $370000.00, $320000.00);
+INSERT INTO tblTargets VALUES (400007, 2004, $350000.00, $160000.00, $340000.00, $370000.00);
+INSERT INTO tblTargets VALUES (400008, 2004, $450000.00, $120000.00, $380000.00, $390000.00);
 
 INSERT INTO tblDonorType VALUES (900001, 'Individual');
 INSERT INTO tblDonorType VALUES (900002, 'Cooperate');
@@ -146,6 +149,10 @@ INSERT INTO tblDonorType VALUES (900003, 'Foundation');
     INSERT INTO  tblPrograms VALUES (300002, 'Arts', 'East Campus', 600002);
     INSERT INTO  tblPrograms VALUES (300003, 'Science', 'West Campus', 600003);
     INSERT INTO  tblPrograms VALUES (300004, 'Health', 'Downtown Campus', 600004);
+    INSERT INTO  tblPrograms VALUES (300005, 'Health', 'Main Campus', 600001);
+    INSERT INTO  tblPrograms VALUES (300006, 'Health', 'East Campus', 600002);
+    INSERT INTO  tblPrograms VALUES (300007, 'Health', 'West Campus', 600003);
+    INSERT INTO  tblPrograms VALUES (300008, 'Health', 'Downtown Campus', 600004);
 
 INSERT INTO tblCommitteeMember VALUES (500001, 'Dwight', 'Scrute', 'dwightscrute@theoffice.com', '906-324-4561', 4, 900003, 600002 );
 INSERT INTO tblCommitteeMember VALUES (500002,'Jim', 'Halpert', 'jimhalpert@theoffice.com', '344-647-1234', 2, 900003, 600004);
@@ -168,6 +175,10 @@ INSERT INTO tblProgramTargets VALUES (800001, 400001, 300001);
 INSERT INTO tblProgramTargets VALUES (800002, 400002, 300002);
 INSERT INTO tblProgramTargets VALUES (800003, 400003, 300003);
 INSERT INTO tblProgramTargets VALUES (800004, 400004, 300004);
+INSERT INTO tblProgramTargets VALUES (800005, 400005, 300005);
+INSERT INTO tblProgramTargets VALUES (800006, 400006, 300006);
+INSERT INTO tblProgramTargets VALUES (800007, 400007, 300007);
+INSERT INTO tblProgramTargets VALUES (800008, 400008, 300008);
 
 INSERT INTO tblUsers VALUES ('Daniel', 'password');
 INSERT INTO tblUsers VALUES ('Anna', 'password');
