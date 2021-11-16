@@ -10,7 +10,8 @@
 
         <Label x:Name="lblLogoHere" FontSize="18" Content="Logo goes here" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button Content="Return to Dashboard" HorizontalAlignment="Left" Margin="676,7,0,0" VerticalAlignment="Top"/>
-        <ListView Margin="0,39,0,0">
+        <DataGrid x:Name="dgDonors"/>
+        <!--<ListView Margin="0,39,0,0">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Donor ID" Width="80" DisplayMemberBinding="{Binding DonorID}"/>
@@ -23,6 +24,6 @@
                     <GridViewColumn Header="Donor Type" Width="80" DisplayMemberBinding="{Binding DonorType}"/>
                 </GridView>
             </ListView.View>
-        </ListView>
+        </ListView>-->
     </Grid>
 </Window>

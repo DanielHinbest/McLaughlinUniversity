@@ -27,5 +27,26 @@ namespace McLaughlinUniversity
             Reports reports = new Reports();
             reports.Show();
         }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
+
+        private void btnViewDonors_Click(object sender, RoutedEventArgs e)
+        {
+            DonorWindow donorWindow = new DonorWindow();
+            donorWindow.Show();
+            this.Close();
+        }
+
+        private void btnViewPrograms_Click(object sender, RoutedEventArgs e)
+        {
+            ProgramWindow programWindow = new ProgramWindow();
+            programWindow.Show();
+            this.Close();
+        }
     }
 }

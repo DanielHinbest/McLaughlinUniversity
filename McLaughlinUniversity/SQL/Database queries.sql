@@ -135,7 +135,7 @@ INSERT INTO tblTargets VALUES (400007, 2004, $350000.00, $160000.00, $340000.00,
 INSERT INTO tblTargets VALUES (400008, 2004, $450000.00, $120000.00, $380000.00, $390000.00);
 
 INSERT INTO tblDonorType VALUES (900001, 'Individual');
-INSERT INTO tblDonorType VALUES (900002, 'Cooperate');
+INSERT INTO tblDonorType VALUES (900002, 'Corporate');
 INSERT INTO tblDonorType VALUES (900003, 'Foundation');
 
 -- Insert records into the donors table
