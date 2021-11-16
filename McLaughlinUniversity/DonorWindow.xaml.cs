@@ -40,7 +40,7 @@ namespace McLaughlinUniversity
                 connection.Open();
 
                 //SQL search query
-                string selectRecords = "SELECT donorID, donorFirstName, donorLastName, donorEmailAddress, donorPhoneNo as 'Phone Number', corporationName, foundationName FROM tblDonors";
+                string selectRecords = "SELECT donorID, donorFirstName, donorLastName, donorEmailAddress, donorPhoneNo as 'Phone Number', corporationName, foundationName, tblDonorType.donorTypeName FROM tblDonors INNER JOIN tblDonorType ON tblDonors.donorTypeID = tblDonorType.donorTypeID";
 
                 //Executes the command
                 SqlCommand command = new SqlCommand(selectRecords, connection);

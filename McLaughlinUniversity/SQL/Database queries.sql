@@ -139,10 +139,10 @@ INSERT INTO tblDonorType VALUES (900002, 'Corporate');
 INSERT INTO tblDonorType VALUES (900003, 'Foundation');
 
 -- Insert records into the donors table
-    INSERT INTO  tblDonors VALUES (100001, 'Joe', 'Smith', 'joesmith@gmail.com', '9058883451', 'Rogers', ' ', 900001);
+    INSERT INTO  tblDonors VALUES (100001, 'Joe', 'Smith', 'joesmith@gmail.com', '9058883451', 'Rogers', ' ', 900002);
     INSERT INTO  tblDonors VALUES (100002, 'Bob', 'Duncan', 'bobduncan@gmail.com', '9053383131', 'Bell', ' ', 900002);
     INSERT INTO  tblDonors VALUES (100003, 'Jane', 'Robinson', 'janerobinson@gmail.com', '9051183331', ' ', 'Childrens Aid Society', 900003);
-    INSERT INTO  tblDonors VALUES (100004, 'Ryan', 'Bauer', 'ryanbauer@gmail.com', '9058883091', ' ', ' ', 900003);
+    INSERT INTO  tblDonors VALUES (100004, 'Ryan', 'Bauer', 'ryanbauer@gmail.com', '9058883091', ' ', ' ', 900001);
 
 -- Insert records into the programs table
     INSERT INTO  tblPrograms VALUES (300001, 'Business', 'Main Campus', 600001);
