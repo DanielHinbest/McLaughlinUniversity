@@ -12,7 +12,7 @@
         <Button Content="Add New Donor" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Height="65" Width="138"/>
         <Button Content="Add New Transaction" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Height="64" Width="138"/>
         <Button Content="Transaction History" HorizontalAlignment="Left" Margin="153,134,0,0" VerticalAlignment="Top" Height="64" Width="138"/>
-        <Button Content="Search Transactions" HorizontalAlignment="Left" Margin="296,133,0,0" VerticalAlignment="Top" Height="65" Width="138"/>
+        <Button Name="btnSearchTransactions"  Content="Search Transactions" HorizontalAlignment="Left" Margin="296,133,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnSearchTransactions_Click"/>
         <Button x:Name="btnViewPrograms" Content="View Programs" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnViewPrograms_Click"/>
         <Button Content="View Targets" HorizontalAlignment="Left" Margin="153,203,0,0" VerticalAlignment="Top" Height="65" Width="138"/>
         <Button Name="btnReports" Content="Reports" HorizontalAlignment="Left" Margin="296,64,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnReports_Click"/>

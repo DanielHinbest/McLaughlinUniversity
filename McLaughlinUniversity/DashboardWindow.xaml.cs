@@ -48,5 +48,12 @@ namespace McLaughlinUniversity
             programWindow.Show();
             this.Close();
         }
+
+        private void btnSearchTransactions_Click(object sender, RoutedEventArgs e)
+        {
+            SearchTransactionsWindow searchTransactionsWindow = new SearchTransactionsWindow();
+            searchTransactionsWindow.Show();
+            this.Close();
+        }
     }
 }
