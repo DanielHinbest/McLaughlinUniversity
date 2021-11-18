@@ -7,15 +7,67 @@
         mc:Ignorable="d"
         Title="Search Transactions" Height="450" Width="600">
     <Grid>
-        <StackPanel Orientation="Vertical">
-            <Label Name="lblSearchHeader" Content="Search By Transaction" FontSize="20" HorizontalContentAlignment="Center"/>
+        <TabControl>
+            <TabItem Name="tabDonors" Header="Donors">
+                <StackPanel Orientation="Vertical">
+                    <Label Name="lblDonorSearchHeader" Content="Search for Transaction" FontSize="20" HorizontalContentAlignment="Center"/>
 
-            <Label Name="lblTransactionID" Content="Transaction ID:" FontSize="18" Margin="0,20,0,0"/>
-            <TextBox x:Name="txtTransactionID" FontSize="18" Margin="0, 10, 0, 0"/>
+                    <Label Name="lblDonorLastName" Content="Donor Last Name:" FontSize="18" Margin="0,20,0,0"/>
+                    <TextBox x:Name="txtDonorName" FontSize="18" Margin="0, 10, 0, 0"/>
 
-            <Button Name="btnSearch" Content="Search for Transaction" FontSize="18" Margin="0,10,0,0" Click="btnSearch_Click"/>
+                    <Button Name="btnDonorSearch" Content="Search" FontSize="18" Margin="0,10,0,0" Click="btnDonorSearch_Click" />
 
-            <DataGrid Name="dgSearchResults"/>
-        </StackPanel>
+                    <DataGrid Name="dgDonorSearchResults"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="tabTransactions" Header="Transactions">
+                <StackPanel Orientation="Vertical">
+                    <Label Name="lblTransactionSearchHeader" Content="Search for Transaction" FontSize="20" HorizontalContentAlignment="Center"/>
+
+                    <Label Name="lblTransactionID" Content="Transaction ID:" FontSize="18" Margin="0,20,0,0"/>
+                    <TextBox x:Name="txtTransactionID" FontSize="18" Margin="0, 10, 0, 0"/>
+
+                    <Button Name="btnTransactionSearch" Content="Search" FontSize="18" Margin="0,10,0,0" Click="btnTransactionSearch_Click"/>
+
+                    <DataGrid Name="dgTransactionSearchResults"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="tabCommitteeMember" Header="Committee Members">
+                <StackPanel Orientation="Vertical">
+                    <Label Name="lblCommitteeSearchHeader" Content="Search for Transaction" FontSize="20" HorizontalContentAlignment="Center"/>
+
+                    <Label Name="lblCommitteeLastName" Content="Committee Member Last Name:" FontSize="18" Margin="0,20,0,0"/>
+                    <TextBox x:Name="txtCommitteeName" FontSize="18" Margin="0, 10, 0, 0"/>
+
+                    <Button Name="btnCommitteeSearch" Content="Search" FontSize="18" Margin="0,10,0,0" Click="btnCommitteeSearch_Click"/>
+
+                    <DataGrid Name="dgCommitteeSearchResults"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="tabDate" Header="Date">
+                <StackPanel Orientation="Vertical">
+                    <Label Name="lblDateSearchHeader" Content="Search for Transaction" FontSize="20" HorizontalContentAlignment="Center"/>
+
+                    <Label Name="lblDateLastName" Content="Date:" FontSize="18" Margin="0,20,0,0"/>
+                    <DatePicker x:Name="dateTransactionDate" FontSize="18" Margin="0, 10, 0, 0"/>
+
+                    <Button Name="btnDateSearch" Content="Search" FontSize="18" Margin="0,10,0,0" Click="btnDateSearch_Click" />
+
+                    <DataGrid Name="dgDateSearchResults"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="tabAmount" Header="Amount">
+                <StackPanel Orientation="Vertical">
+                    <Label Name="lblAmountSearchHeader" Content="Search for Transaction" FontSize="20" HorizontalContentAlignment="Center"/>
+
+                    <Label Name="lblAmount" Content="Amount:" FontSize="18" Margin="0,20,0,0"/>
+                    <TextBox x:Name="txtAmount" FontSize="18" Margin="0, 10, 0, 0"/>
+
+                    <Button Name="btnAmount" Content="Search" FontSize="18" Margin="0,10,0,0" Click="btnAmount_Click"/>
+
+                    <DataGrid Name="dgAmountSearchResults"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
