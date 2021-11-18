@@ -189,7 +189,7 @@ namespace McLaughlinUniversity
                     "INNER JOIN tblTransactions ON tblDonors.donorID = tblTransactions.donorID " +
                     "INNER JOIN tblCommitteeMember ON tblCommitteeMember.committeeID = tblTransactions.committeeID " +
                     "INNER JOIN tblPrograms ON tblPrograms.programID = tblTransactions.programID " +
-                    "WHERE transactionAmount >= " + transactionAmount + ";";
+                    "WHERE transactionAmount > " + transactionAmount + ";";
 
                 SqlCommand command = new SqlCommand(searchRecord, connection);
 
