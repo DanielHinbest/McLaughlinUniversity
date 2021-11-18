@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace McLaughlinUniversity
 {
@@ -10,7 +11,8 @@ namespace McLaughlinUniversity
     {
         public static string GetConnectionString()
         {
-            return Properties.Settings.Default.connectString;
+            return "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = " +
+                "D:\\Users\\Daniel\\Documents\\Durham College\\Computer Programming and Analysis\\Semester 5\\DBAS 6206\\Final Project\\McLaughlinUniversity\\McLaughlinUniversity\\McLaughlinUniversity.mdf; Integrated Security = True";
         }
 
 
