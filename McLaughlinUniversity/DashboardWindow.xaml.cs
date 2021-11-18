@@ -55,5 +55,12 @@ namespace McLaughlinUniversity
             searchTransactionsWindow.Show();
             this.Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TransactionsHistory transactionsHistoryWindow = new TransactionsHistory();
+            transactionsHistoryWindow.Show();
+            this.Close();
+        }
     }
 }
