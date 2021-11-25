@@ -6,7 +6,22 @@
              xmlns:local="clr-namespace:McLaughlinUniversity"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid Margin="0,52,0,0">
+        <Label Content="Select A Year:" HorizontalAlignment="Left" Margin="270,-42,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cmbYear" HorizontalAlignment="Left" Margin="355,-42,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="2021"/>
+            <ComboBoxItem Content="2020"/>
+            <ComboBoxItem Content="2019"/>
+            <ComboBoxItem Content="2018"/>
+            <ComboBoxItem Content="2017"/>
+            <ComboBoxItem Content="2016"/>
+            <ComboBoxItem Content="2015"/>
+            <ComboBoxItem Content="2014"/>
+            <ComboBoxItem Content="2013"/>
+            <ComboBoxItem Content="2012"/>
+            <ComboBoxItem Content="2011"/>
+        </ComboBox>
+        <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="480,-39,0,0" VerticalAlignment="Top" Click="btnSubmit_Click"/>
         <DataGrid Name="dgIndividualCampusTargetsReport"/>
     </Grid>
 </UserControl>

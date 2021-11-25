@@ -23,7 +23,6 @@ namespace McLaughlinUniversity
         public IndividualCampusTargetsReport()
         {
             InitializeComponent();
-            PopulateGrid();
         }
 
         private void PopulateGrid()
@@ -31,6 +30,7 @@ namespace McLaughlinUniversity
             //Try/Catch exception handling
             try
             {
+                int year = Convert.ToInt32(cmbYear.Text);
                 //Stores the connection settings in the variable
                 string connectString = DataAccess.GetConnectionString();
 
@@ -41,9 +41,11 @@ namespace McLaughlinUniversity
                 connection.Open();
 
                 //SQL search query
-                string selectRecords = "SELECT campusName as 'Campus Name', SUM(firstQuarterTarget) as 'Qrt 1', SUM(secondQuarterTarget) as 'Qrt 2', SUM(thirdQuarterTarget) as 'Qrt 3', SUM(fourthQuarterTarget) as 'Qrt 4' " +
-                    "FROM tblCampus, tblTargets, tblProgramTargets " +
-                    "GROUP BY campusName;";
+                string selectRecords = "SELECT campusName as 'Campus Name', SUM(tblTargets.firstQuarterTarget) as 'Qrt 1', SUM(tblTargets.secondQuarterTarget) as 'Qrt 2', SUM(tblTargets.thirdQuarterTarget) as 'Qrt 3', SUM(tblTargets.fourthQuarterTarget) as 'Qrt 4' " +
+                    "FROM tblProgramTargets,tblTargets " +
+                    "INNER JOIN tblCampus ON tblTargets.targetID = tblCampus.targetID " + 
+                    "WHERE yearNo = " + year +
+                    "GROUP BY campusName " + ";";
 
                 //Executes the command
                 SqlCommand command = new SqlCommand(selectRecords, connection);
@@ -68,6 +70,11 @@ namespace McLaughlinUniversity
                 //Outputs the error to the user
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            PopulateGrid();
         }
     }
 }
