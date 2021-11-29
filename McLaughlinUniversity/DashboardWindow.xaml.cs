@@ -32,6 +32,7 @@ namespace McLaughlinUniversity
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
+            this.Close();
         }
 
         private void btnViewDonors_Click(object sender, RoutedEventArgs e)
