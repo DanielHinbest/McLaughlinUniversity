@@ -10,17 +10,7 @@
         <Label x:Name="lblLogoHere" FontSize="18" Content="Logo goes here" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
         <Button Content="Return to Dashboard" HorizontalAlignment="Left" Margin="486,7,0,0" VerticalAlignment="Top"/>
-        <ListView Margin="0,39,0,0">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Target ID" Width="80" DisplayMemberBinding="{Binding DonorID}"/>
-                    <GridViewColumn Header="Year" Width="40" DisplayMemberBinding="{Binding DonorID}"/>
-                    <GridViewColumn Header="First Quarter Target" Width="120" DisplayMemberBinding="{Binding DonorID}"/>
-                    <GridViewColumn Header="Second Quarter Target" Width="120" DisplayMemberBinding="{Binding DonorID}"/>
-                    <GridViewColumn Header="Third Quarter Target" Width="120" DisplayMemberBinding="{Binding DonorID}"/>
-                    <GridViewColumn Header="Fourth Quarter Target" Width="120" DisplayMemberBinding="{Binding DonorID}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <DataGrid x:Name="dgTargets"/>
+        
     </Grid>
 </Window>

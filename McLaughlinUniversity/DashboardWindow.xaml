@@ -9,12 +9,12 @@
     <Grid>
         <Label x:Name="lblLogoHere" FontSize="18" Content="Logo goes here" HorizontalAlignment="Left" Margin="153,10,0,0" VerticalAlignment="Top" Height="40" Width="138"/>
         <Button x:Name="btnViewDonors" Content="View Donors" HorizontalAlignment="Left" Margin="153,64,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnViewDonors_Click" />
-        <Button Content="Add New Donor" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Height="65" Width="138"/>
+        <Button Content="Add New Donor" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnAddNewDonor_Click"/>
         <Button Content="Add New Transaction" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Height="64" Width="138"/>
         <Button Content="Transaction History" HorizontalAlignment="Left" Margin="153,134,0,0" VerticalAlignment="Top" Height="64" Width="138"/>
-        <Button Name="btnSearchTransactions"  Content="Search" HorizontalAlignment="Left" Margin="296,133,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnSearchTransactions_Click"/>
+        <Button Content="Search Transactions" HorizontalAlignment="Left" Margin="296,133,0,0" VerticalAlignment="Top" Height="65" Width="138" Name="btnSearch" Click="btnSearch_Click"/>
         <Button x:Name="btnViewPrograms" Content="View Programs" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnViewPrograms_Click"/>
-        <Button Content="View Targets" HorizontalAlignment="Left" Margin="153,203,0,0" VerticalAlignment="Top" Height="65" Width="138"/>
+        <Button Content="View Targets" HorizontalAlignment="Left" Margin="153,203,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnViewTargets_Click"/>
         <Button Name="btnReports" Content="Reports" HorizontalAlignment="Left" Margin="296,64,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnReports_Click"/>
 
 

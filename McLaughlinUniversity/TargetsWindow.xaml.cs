@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +22,37 @@ namespace McLaughlinUniversity
         public TargetsWindow()
         {
             InitializeComponent();
+            PopulateTargetGrid();
+        }
+
+        private void PopulateTargetGrid()
+        {
+            string connectString = DataAccess.GetConnectionString();
+            SqlConnection connection = new SqlConnection(connectString);
+
+            SqlCommand command = new SqlCommand("SELECT targetID, yearNO, firstQuarterTarget, secondQuarterTarget, thirdQuarterTarget, fourthQuarterTarget FROM tblTargets", connection);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+
+                DataTable data = new DataTable("Targets");
+                dataAdapter.Fill(data);
+
+                dgTargets.ItemsSource = data.DefaultView;
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was an error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }

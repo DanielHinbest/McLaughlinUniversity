@@ -32,35 +32,37 @@ namespace McLaughlinUniversity
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            this.Close();
         }
 
         private void btnViewDonors_Click(object sender, RoutedEventArgs e)
         {
             DonorWindow donorWindow = new DonorWindow();
             donorWindow.Show();
-            this.Close();
         }
 
         private void btnViewPrograms_Click(object sender, RoutedEventArgs e)
         {
             ProgramWindow programWindow = new ProgramWindow();
             programWindow.Show();
-            this.Close();
         }
 
-        private void btnSearchTransactions_Click(object sender, RoutedEventArgs e)
+        private void btnAddNewDonor_Click(object sender, RoutedEventArgs e)
+        {
+            AddDonorWindow addDonorWindow = new AddDonorWindow();
+            addDonorWindow.Show();
+
+        }
+
+        private void btnViewTargets_Click(object sender, RoutedEventArgs e)
+        {
+            TargetsWindow targetsWindow = new TargetsWindow();
+            targetsWindow.Show();
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
             SearchTransactionsWindow searchTransactionsWindow = new SearchTransactionsWindow();
             searchTransactionsWindow.Show();
-            this.Close();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            TransactionsHistory transactionsHistoryWindow = new TransactionsHistory();
-            transactionsHistoryWindow.Show();
-            this.Close();
         }
     }
 }

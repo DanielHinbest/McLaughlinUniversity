@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+
 namespace McLaughlinUniversity
 {
     class DataAccess
     {
         public static string GetConnectionString()
         {
-            return "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = " +
-                "D:\\Users\\Daniel\\Documents\\Durham College\\Computer Programming and Analysis\\Semester 5\\DBAS 6206\\Final Project\\McLaughlinUniversity\\McLaughlinUniversity\\McLaughlinUniversity.mdf; Integrated Security = True";
+            return Properties.Settings.Default.connectString;
         }
 
 
@@ -40,5 +40,41 @@ namespace McLaughlinUniversity
 
             return user;
         }
+
+        
+
+        public static bool InsertNewDonor(Donor insertDonor)
+        {
+            bool returnValue = false;
+
+            string connectString = GetConnectionString();
+            SqlConnection connection = new SqlConnection(connectString);
+
+            SqlCommand command = new SqlCommand("INSERT INTO tblDonors VALUES(@donorFirstName, @donorLastName, @donorEmailAddress, @donorPhoneNo, @corporationName, @foundationName, @donorTypeID)", connection);
+            command.Parameters.AddWithValue("@donorFirstName", insertDonor.FirstName);
+            command.Parameters.AddWithValue("@donorLastName", insertDonor.LastName);
+            command.Parameters.AddWithValue("@donorEmailAddress", insertDonor.EmailAddress);
+            command.Parameters.AddWithValue("@donorPhoneNo", insertDonor.PhoneNo);
+            command.Parameters.AddWithValue("@corporationName", insertDonor.CorporationName);
+            command.Parameters.AddWithValue("@foundationName", insertDonor.FoundationName);
+            command.Parameters.AddWithValue("@donorTypeID", insertDonor.DonorTypeID);
+
+            try
+            {
+                connection.Open();
+                returnValue = (command.ExecuteNonQuery() == 1);
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show("A database error has been encountered: " + Environment.NewLine + ex.Message, "Database Error");
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return returnValue;
+        }
+
     }
 }
