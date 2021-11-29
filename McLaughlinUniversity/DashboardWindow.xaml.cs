@@ -64,5 +64,11 @@ namespace McLaughlinUniversity
             SearchTransactionsWindow searchTransactionsWindow = new SearchTransactionsWindow();
             searchTransactionsWindow.Show();
         }
+
+        private void btnTransactionHistory_Click(object sender, RoutedEventArgs e)
+        {
+            TransactionsHistory transactionsHistory = new TransactionsHistory();
+            transactionsHistory.Show();
+        }
     }
 }
