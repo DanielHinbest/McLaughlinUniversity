@@ -7,6 +7,21 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid Name="dgDonorTypeTargetsReport"/>
+        <DataGrid Name="dgDonorTypeTargetsReport" Margin="0,45,0,0"/>
+        <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="400,10,0,0" VerticalAlignment="Top" Click="btnSubmit_Click"/>
+        <ComboBox Name="cmbYear" HorizontalAlignment="Left" Margin="275,7,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="2021"/>
+            <ComboBoxItem Content="2020"/>
+            <ComboBoxItem Content="2019"/>
+            <ComboBoxItem Content="2018"/>
+            <ComboBoxItem Content="2017"/>
+            <ComboBoxItem Content="2016"/>
+            <ComboBoxItem Content="2015"/>
+            <ComboBoxItem Content="2014"/>
+            <ComboBoxItem Content="2013"/>
+            <ComboBoxItem Content="2012"/>
+            <ComboBoxItem Content="2011"/>
+        </ComboBox>
+        <Label Content="Year" HorizontalAlignment="Left" Margin="226,7,0,0" VerticalAlignment="Top" Width="44"/>
     </Grid>
 </UserControl>
