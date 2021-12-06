@@ -186,10 +186,10 @@ INSERT INTO tblUsers VALUES ('Ryan', 'password');
 INSERT INTO tblUsers VALUES ('Yash', 'password');
 
 -- Insert records into the campus table
-    INSERT INTO  tblCampus VALUES ('Main Campus', '66 Steele Valley Ct', 'L1R2M3', 400001);
-    INSERT INTO  tblCampus VALUES ('East Campus', '52 Rolling Acres Dr', 'L1R2B8', 400002);
-    INSERT INTO  tblCampus VALUES ('West Campus', '28 Hartrick Pl', 'L1R2C2', 400003);
-    INSERT INTO  tblCampus VALUES ('Downtown Campus', '304 Chestnut St W', 'L1N2Y8', 400004);
+    INSERT INTO  tblCampus VALUES ('Main Campus', '66 Steele Valley Ct', 'L1R2M3');
+    INSERT INTO  tblCampus VALUES ('East Campus', '52 Rolling Acres Dr', 'L1R2B8');
+    INSERT INTO  tblCampus VALUES ('West Campus', '28 Hartrick Pl', 'L1R2C2');
+    INSERT INTO  tblCampus VALUES ('Downtown Campus', '304 Chestnut St W', 'L1N2Y8');
 
 -- Insert records into the committe targets table
     INSERT INTO  tblCommitteeTargets VALUES (110001, 400001, 500001);
