@@ -41,11 +41,12 @@ namespace McLaughlinUniversity
                 connection.Open();
 
                 //SQL search query
-                string selectRecords = "SELECT campusName as 'Campus Name', SUM(tblTargets.firstQuarterTarget) as 'Qrt 1', SUM(tblTargets.secondQuarterTarget) as 'Qrt 2', SUM(tblTargets.thirdQuarterTarget) as 'Qrt 3', SUM(tblTargets.fourthQuarterTarget) as 'Qrt 4' " +
-                    "FROM tblProgramTargets,tblTargets " +
-                    "INNER JOIN tblCampus ON tblTargets.targetID = tblCampus.targetID " + 
+                string selectRecords = "SELECT tblCampus.campusName as 'Campus Name', SUM(tblTargets.firstQuarterTarget) as 'Qrt 1', SUM(tblTargets.secondQuarterTarget) as 'Qrt 2', SUM(tblTargets.thirdQuarterTarget) as 'Qrt 3', SUM(tblTargets.fourthQuarterTarget) as 'Qrt 4' " +
+                    "FROM tblCampus, ((tblProgramTargets " +
+                    "INNER JOIN tblTargets ON tblProgramTargets.targetID = tblTargets.targetID) " +
+                    "INNER JOIN tblPrograms ON tblPrograms.campusName = campusName) " +
                     "WHERE yearNo = " + year +
-                    "GROUP BY campusName " + ";";
+                    "GROUP BY tblCampus.campusName;;";
 
                 //Executes the command
                 SqlCommand command = new SqlCommand(selectRecords, connection);
