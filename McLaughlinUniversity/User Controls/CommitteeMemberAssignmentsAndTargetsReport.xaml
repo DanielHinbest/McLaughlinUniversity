@@ -7,6 +7,21 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid Name="dgCommitteememberAssignmentsAndTargets"/>
+        <DataGrid Name="dgCommitteememberAssignmentsAndTargets" Margin="0,39,0,0"/>
+        <Label Content="Select a Year:" HorizontalAlignment="Left" Margin="210,8,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cmbYear" HorizontalAlignment="Left" Margin="294,8,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="2021"/>
+            <ComboBoxItem Content="2020"/>
+            <ComboBoxItem Content="2019"/>
+            <ComboBoxItem Content="2018"/>
+            <ComboBoxItem Content="2017"/>
+            <ComboBoxItem Content="2016"/>
+            <ComboBoxItem Content="2015"/>
+            <ComboBoxItem Content="2014"/>
+            <ComboBoxItem Content="2013"/>
+            <ComboBoxItem Content="2012"/>
+            <ComboBoxItem Content="2011"/>
+        </ComboBox>
+        <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="429,10,0,0" VerticalAlignment="Top" Click="btnSubmit_Click"/>
     </Grid>
 </UserControl>
