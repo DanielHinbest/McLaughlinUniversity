@@ -46,7 +46,7 @@ namespace McLaughlinUniversity
                     "INNER JOIN tblTargets ON tblProgramTargets.targetID = tblTargets.targetID) " +
                     "INNER JOIN tblPrograms ON tblPrograms.campusName = campusName) " +
                     "WHERE yearNo = " + year +
-                    "GROUP BY tblCampus.campusName;;";
+                    "GROUP BY tblCampus.campusName;";
 
                 //Executes the command
                 SqlCommand command = new SqlCommand(selectRecords, connection);

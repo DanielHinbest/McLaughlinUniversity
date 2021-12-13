@@ -27,7 +27,7 @@ namespace McLaughlinUniversity
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-
+            PopulateGrid();
         }
 
         private void PopulateGrid()
@@ -46,7 +46,10 @@ namespace McLaughlinUniversity
                 connection.Open();
 
                 //SQL search query
-                string selectRecords = "";
+                string selectRecords = "SELECT CONCAT(committeeFirstName, ' ', committeeLastName) as 'Committee Member', donorTypeID, firstQuarterTarget, secondQuarterTarget, thirdQuarterTarget, fourthQuarterTarget "
+                    + "FROM tblCommitteeMember, tblTargets "
+                    + "INNER JOIN tblCommitteeTargets ON tblTargets.targetID = tblCommitteeTargets.targetID "
+                    + "WHERE yearNo = " + year;
                 //Executes the command
                 SqlCommand command = new SqlCommand(selectRecords, connection);
 
