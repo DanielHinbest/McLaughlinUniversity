@@ -7,28 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid Name="dgCommitteePerformanceReport" Margin="0,45,0,0"/>
-        <Label Name="lblQuarter" Content="Quarter:" HorizontalAlignment="Left" Margin="183,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.605,0.601"/>
-        <ComboBox Name="cmbQuarter" HorizontalAlignment="Left" Margin="241,12,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Name="btnQOne" Content="First Quarter"/>
-            <ComboBoxItem Name="btnQTwo" Content="Second Quarter"/>
-            <ComboBoxItem Name="btnQThree" Content="Third Quarter"/>
-            <ComboBoxItem Name="btnQFour" Content="Fourth Quarter"/>
-        </ComboBox>
-        <Label Name="lblYear" Content="Year:" HorizontalAlignment="Left" Margin="370,10,0,0" VerticalAlignment="Top"/>
-        <ComboBox Name="cmbYear" HorizontalAlignment="Left" Margin="410,12,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="2021"/>
-            <ComboBoxItem Content="2020"/>
-            <ComboBoxItem Content="2019"/>
-            <ComboBoxItem Content="2018"/>
-            <ComboBoxItem Content="2017"/>
-            <ComboBoxItem Content="2016"/>
-            <ComboBoxItem Content="2015"/>
-            <ComboBoxItem Content="2014"/>
-            <ComboBoxItem Content="2013"/>
-            <ComboBoxItem Content="2012"/>
-            <ComboBoxItem Content="2011"/>
-        </ComboBox>
-        <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="535,14,0,0" VerticalAlignment="Top" Click="btnSubmit_Click"/>
+        <DataGrid Name="dgCommitteePerformanceReport"/>
     </Grid>
 </UserControl>

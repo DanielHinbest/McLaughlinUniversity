@@ -71,5 +71,12 @@ namespace McLaughlinUniversity
             TransactionsHistory transactionsHistory = new TransactionsHistory();
             transactionsHistory.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AddTransaction addTransaction = new AddTransaction();
+            addTransaction.Show();
+            this.Hide();
+        }
     }
 }

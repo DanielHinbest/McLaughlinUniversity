@@ -10,7 +10,7 @@ namespace McLaughlinUniversity
     {
         public static string GetConnectionString()
         {
-            return "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\Users\\Daniel\\Documents\\Durham College\\Computer Programming and Analysis\\Semester 5\\DBAS 6206\\Final Project\\McLaughlinUniversity\\McLaughlinUniversity\\McLaughlinUniversity.mdf\";Integrated Security=True;";
+            return "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"D:\\Users\\Daniel\\Downloads\\McLaughlinUniversity-master (1)\\McLaughlinUniversity-master\\McLaughlinUniversity\\McLaughlinUniversity.mdf\"; Integrated Security = True";
         }
 
         public static User GetUser(string userID, string password)
@@ -57,6 +57,37 @@ namespace McLaughlinUniversity
             command.Parameters.AddWithValue("@corporationName", insertDonor.CorporationName);
             command.Parameters.AddWithValue("@foundationName", insertDonor.FoundationName);
             command.Parameters.AddWithValue("@donorTypeID", insertDonor.DonorTypeID);
+
+            try
+            {
+                connection.Open();
+                returnValue = (command.ExecuteNonQuery() == 1);
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show("A database error has been encountered: " + Environment.NewLine + ex.Message, "Database Error");
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return returnValue;
+        }
+
+        public static bool InsertNewTransaction(Transaction newTransaction)
+        {
+            bool returnValue = false;
+
+            string connectString = GetConnectionString();
+            SqlConnection connection = new SqlConnection(connectString);
+
+            SqlCommand command = new SqlCommand("INSERT INTO tblTransactions VALUES(@transactionAmount, @transactionDate, @donorID, @programID, @committeeID)", connection);
+            command.Parameters.AddWithValue("@transactionAmount", newTransaction.Amount);
+            command.Parameters.AddWithValue("@transactionDate", newTransaction.Date);
+            command.Parameters.AddWithValue("@donorID", newTransaction.DonorID);
+            command.Parameters.AddWithValue("@programID", newTransaction.ProgramID);
+            command.Parameters.AddWithValue("@committeeID", newTransaction.CommitteeID);
 
             try
             {
