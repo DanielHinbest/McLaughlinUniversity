@@ -49,22 +49,22 @@ namespace McLaughlinUniversity
                //     "GROUP BY tblCampus.campusName;";
 
                 //Executes the command
-                SqlCommand command = new SqlCommand(selectRecords, connection);
+                //SqlCommand command = new SqlCommand(selectRecords, connection);
 
                 //Retrieves the data from the database
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                //SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
 
                 //A new data table for the targets in the database
-                DataTable data = new DataTable("Targets");
+                //DataTable data = new DataTable("Targets");
 
                 //Fills the data adapter with the information from the data table
-                dataAdapter.Fill(data);
+               // dataAdapter.Fill(data);
 
                 //Outputs the items to the screen
-                dgContributionsByCampusReport.ItemsSource = data.DefaultView;
+                //dgContributionsByCampusReport.ItemsSource = data.DefaultView;
 
                 //Closes the connection
-                connection.Close();
+                //connection.Close();
             }
             catch (Exception ex)
             {
