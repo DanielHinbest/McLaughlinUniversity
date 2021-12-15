@@ -1,0 +1,23 @@
+﻿<Window x:Class="McLaughlinUniversity.DashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:McLaughlinUniversity"
+        mc:Ignorable="d"
+        Title="Dashboard" Height="300" Width="450">
+    <Grid>
+        <Label x:Name="lblLogoHere" FontSize="18" Content="Logo goes here" HorizontalAlignment="Left" Margin="153,10,0,0" VerticalAlignment="Top" Height="40" Width="138"/>
+        <Button x:Name="btnViewDonors" Content="View Donors" HorizontalAlignment="Left" Margin="153,64,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnViewDonors_Click" />
+        <Button Content="Add New Donor" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnAddNewDonor_Click"/>
+        <Button Content="Add New Transaction" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Height="64" Width="138" Click="Button_Click"/>
+        <Button  Name="btnTransactionHistory" Content="Transaction History" HorizontalAlignment="Left" Margin="153,134,0,0" VerticalAlignment="Top" Height="64" Width="138" Click="btnTransactionHistory_Click"/>
+        <Button Content="Search Transactions" HorizontalAlignment="Left" Margin="296,133,0,0" VerticalAlignment="Top" Height="65" Width="138" Name="btnSearch" Click="btnSearch_Click"/>
+        <Button x:Name="btnViewPrograms" Content="View Programs" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnViewPrograms_Click"/>
+        <Button Content="View Targets" HorizontalAlignment="Left" Margin="153,203,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnViewTargets_Click"/>
+        <Button Name="btnReports" Content="Reports" HorizontalAlignment="Left" Margin="296,64,0,0" VerticalAlignment="Top" Height="65" Width="138" Click="btnReports_Click"/>
+
+
+        <Button Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="296,203,0,0" VerticalAlignment="Top" Width="138" Height="64" Click="btnLogout_Click" />
+    </Grid>
+</Window>
