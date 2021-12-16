@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Margin="0,52,0,0">
-        <Label Content="Select A Year:" HorizontalAlignment="Left" Margin="270,-42,0,0" VerticalAlignment="Top"/>
-        <ComboBox Name="cmbYear" HorizontalAlignment="Left" Margin="355,-42,0,0" VerticalAlignment="Top" Width="120">
+        <Label Content="Select A Year:" HorizontalAlignment="Left" Margin="365,-41,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cmbYear" HorizontalAlignment="Left" Margin="450,-41,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="2021"/>
             <ComboBoxItem Content="2020"/>
             <ComboBoxItem Content="2019"/>
@@ -21,7 +21,14 @@
             <ComboBoxItem Content="2012"/>
             <ComboBoxItem Content="2011"/>
         </ComboBox>
-        <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="480,-39,0,0" VerticalAlignment="Top" Click="btnSubmit_Click"/>
+        <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="575,-38,0,0" VerticalAlignment="Top" Click="btnSubmit_Click"/>
         <DataGrid Name="dgContributionsByCampusReport"/>
+        <Label Content="Select A Quarter:" HorizontalAlignment="Left" Margin="124,-41,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cmbQuarter" HorizontalAlignment="Left" Margin="223,-39,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Name="btnQOne" Content="First Quarter"/>
+            <ComboBoxItem Name="btnQTwo" Content="Second Quarter"/>
+            <ComboBoxItem Name="btnQThree" Content="Third Quarter"/>
+            <ComboBoxItem Name="btnQFour" Content="Fourth Quarter"/>
+        </ComboBox>
     </Grid>
 </UserControl>
