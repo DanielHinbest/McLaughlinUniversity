@@ -6,7 +6,34 @@
              xmlns:local="clr-namespace:McLaughlinUniversity"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <DataGrid Name="dgContributionsByDonorCategory"/>
+    <Grid Margin="0,52,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="53*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Select A Year:" HorizontalAlignment="Left" Margin="112,-45,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cmbYear" HorizontalAlignment="Left" Margin="237,-43,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="2021"/>
+            <ComboBoxItem Content="2020"/>
+            <ComboBoxItem Content="2019"/>
+            <ComboBoxItem Content="2018"/>
+            <ComboBoxItem Content="2017"/>
+            <ComboBoxItem Content="2016"/>
+            <ComboBoxItem Content="2015"/>
+            <ComboBoxItem Content="2014"/>
+            <ComboBoxItem Content="2013"/>
+            <ComboBoxItem Content="2012"/>
+            <ComboBoxItem Content="2011"/>
+        </ComboBox>
+        <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="400,-42,0,0" VerticalAlignment="Top" Click="btnSubmit_Click" Grid.Column="1"/>
+        <DataGrid Name="dgContributionByDonorCategory" Grid.ColumnSpan="2"/>
+        <Label Content="Select Quarter" Grid.Column="1" HorizontalAlignment="Left" Margin="130,-45,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cmbQrt" Grid.Column="1" HorizontalAlignment="Left" Margin="229,-43,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+        </ComboBox>
+
     </Grid>
 </UserControl>
